@@ -1,0 +1,45 @@
+/* Café Rosa - simple, warm stylesheet */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #3e3029; background: #f8f0e7; line-height: 1.6; }
+
+header { width: 100%; min-height: 200px; background-color: #0af5f1; display: flex; align-items: center; }
+.header-inner { width: min(1100px, 92%); margin: 0 auto; padding: 35px 0; }
+h1 { margin: 0; font-family: Georgia, serif; font-size: clamp(2.7rem, 7vw, 5rem); line-height: 1; color: #5b3025; }
+.tagline { margin: 12px 0 0; font-size: 1.15rem; }
+.eyebrow { margin: 0 0 8px; text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 700; color: #9a4b32; }
+
+nav { width: 100%; min-height: 80px; background-color: #21918f; display: flex; align-items: center; }
+.nav-inner { width: min(1100px, 92%); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px; }
+nav a { color: #fff; text-decoration: none; padding: 12px 18px; border-radius: 8px; font-weight: 700; transition: background-color .2s ease, color .2s ease; }
+nav a:hover, nav a:focus-visible { background: #f3b18e; color: #3e3029; outline: none; }
+
+main { width: 100%; min-height: 800px; background-color: #daf2f2; padding: 55px 0; }
+main > section { width: min(1100px, 92%); margin: 0 auto 45px; }
+.hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 42px; align-items: center; }
+h2 { font-family: Georgia, serif; color: #63382c; line-height: 1.2; }
+.hero h2 { font-size: clamp(2rem, 4vw, 3.4rem); margin: 0 0 18px; }
+.hero p:not(.eyebrow) { font-size: 1.1rem; max-width: 650px; }
+.cafe-photo { min-height: 330px; border-radius: 22px; background: linear-gradient(135deg, #e9b08e, #9d634a); box-shadow: 0 12px 35px rgba(65, 45, 35, .18); transition: filter .25s ease, transform .25s ease; }
+.cafe-photo:hover { filter: brightness(1.08); transform: translateY(-3px); }
+
+.button { display: inline-block; margin-top: 12px; padding: 12px 20px; background: #d56b43; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; }
+.button:hover, .button:focus-visible { background: #a94d2d; }
+.button.secondary { background: #21918f; }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.card { background: rgba(255,255,255,.72); border: 1px solid rgba(99,56,44,.12); border-radius: 16px; padding: 28px; box-shadow: 0 8px 24px rgba(65,45,35,.07); }
+.card h2 { margin-top: 0; }
+.card a { color: #9a4b32; font-weight: 700; }
+.review { text-align: center; }
+
+footer { width: 100%; min-height: 80px; background-color: #21918f; color: #fff; display: flex; align-items: center; justify-content: center; text-align: center; padding: 15px; }
+
+@media (max-width: 720px) {
+  header { min-height: 200px; }
+  nav { min-height: 80px; }
+  .nav-inner { justify-content: center; }
+  nav a { padding: 10px 13px; }
+  main { padding: 35px 0; }
+  .hero, .info-grid { grid-template-columns: 1fr; }
+  .cafe-photo { min-height: 240px; }
+}
